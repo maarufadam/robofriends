@@ -3,7 +3,6 @@ import SearchBox from '../components/SearchBox'
 import CardList from '../components/CardList';
 import Scroll from '../components/Scroll';
 import ErrorBoundry from '../components/ErrorBoundry';
-import {robots} from '../robots';
 import './App.css';
 
 class App extends React.Component {
@@ -19,7 +18,6 @@ class App extends React.Component {
 		fetch('https://jsonplaceholder.typicode.com/users')
 			.then(response => response.json())
 			.then(users => this.setState({robots: users}));
-		this.setState({robots: robots});
 	}
 
 	onSearchChange = (event) => {
